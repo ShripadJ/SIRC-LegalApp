@@ -1,0 +1,36 @@
+<!-- <div>
+  <nav class="navbar navbar-expand navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/homepage">{{navTitle}}</a>
+    <ul class="nav nav-pills">
+      <li><a class="nav-link" routerLink="/litigationhome">Litigation</a></li>
+      <li><a class="nav-link">Business Development</a></li>
+      <li><a class="nav-link">Joint Venture</a></li>
+    </ul>
+  </nav>
+</div> -->
+
+<mat-toolbar color="primary" class="navbar">
+  <div>
+    <!-- <img src="SIRC-Logo.png"> -->
+    <mat-label routerLink="/homepage">{{navTitle}}</mat-label>
+  </div>
+  <div>
+    <button mat-button [matMenuTriggerFor]="menu">Litigation</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/createcase">Create Case</button>
+      <button mat-menu-item routerLink="/caseinfo">Case Information</button>
+      <button mat-menu-item routerLink="/casearchive">Case Archive</button>
+    </mat-menu>
+    <button mat-button>Business Development</button>
+    <button mat-button>Joint Venture</button>
+  </div>
+</mat-toolbar>
+
+<!-- <div class="col-sm-1">
+    <mat-label routerLink="/litigationhome">Litigation</mat-label>
+    <mat-select>
+      <mat-option routerLink="/createcase">Create Case</mat-option>
+      <mat-option routerLink="/caseinfo">Case Information</mat-option>
+      <mat-option routerLink="/casearchive">Case Archive</mat-option>
+    </mat-select>
+  </div> -->
