@@ -1,4 +1,333 @@
-<div class="container">
+<div class="flex-container">
+  <div>
+    <form [formGroup]="createcaseform">
+
+      <!--Heading-->
+      <div class="col-lg-8">
+        <mat-card class="cardPadding" style="background-color: #F2F3F4;">
+          <mat-card-header>
+            <h1 style="font-weight:500; color: #3f51b5;">Create Case</h1>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-label>Let's get started!</mat-label>
+            <button (click)="resetCaseForm()" color="accent" mat-raised-button style="margin-right:20px; margin-left: 450px;">Reset</button>
+            <button (click)="postCaseDetails()" color="primary" mat-raised-button>Submit!</button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="row">
+        <!--Company Info-->
+        <div class="col-lg-4">
+          <mat-card class="cardPadding">
+            <mat-card-header>
+              <mat-card-subtitle class="mat-card-subtitle">Information of Company seeking the
+                lawsuit:</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-form-field class="formPaddingFirst">
+                <input formControlName="companyName" matInput placeholder="Company's Full Name" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('companyName')?.touched && createcaseform.get('companyName')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="crNum" matInput placeholder="CR No." />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('crNum')?.touched && createcaseform.get('crNum')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="natAdd" matInput placeholder="National Address" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('natAdd')?.touched && createcaseform.get('natAdd')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="dirID" matInput placeholder="Director's ID" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('dirID')?.touched && createcaseform.get('dirID')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <!--Applicant Info-->
+        <div class="col-lg-4">
+          <mat-card class="cardPadding">
+            <mat-card-header>
+              <mat-card-subtitle class="mat-card-subtitle">Information of the Applicant:</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-form-field class="formPaddingFirst">
+                <input formControlName="appPhn" matInput placeholder="Phone" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('appPhn')?.touched && createcaseform.get('appPhn')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="appEmail" matInput placeholder="Email" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('appEmail')?.touched && createcaseform.get('appEmail')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="appPosition" matInput placeholder="Position" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('appPosition')?.touched && createcaseform.get('appPosition')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="appName" matInput placeholder="Name" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('appName')?.touched && createcaseform.get('appName')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <div class="row">
+        <!--Applicant Manager Info-->
+        <div class="col-lg-4">
+          <mat-card class="cardPadding">
+            <mat-card-header>
+              <mat-card-subtitle class="mat-card-subtitle">Information of the Applicant's Direct
+                Manager:</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-form-field class="formPaddingFirst">
+                <input formControlName="appManPhn" matInput placeholder="Phone" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('appManPhn')?.touched && createcaseform.get('appManPhn')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="appManEmail" matInput placeholder="Email" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('appManEmail')?.touched && createcaseform.get('appManEmail')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="appManPosition" matInput placeholder="Position" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('appManPosition')?.touched && createcaseform.get('appManPosition')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="appManName" matInput placeholder="Name" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('appManName')?.touched && createcaseform.get('appManName')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <!--Applicant Alternative Info-->
+        <div class="col-lg-4">
+          <mat-card class="cardPadding">
+            <mat-card-header>
+              <mat-card-subtitle class="mat-card-subtitle">Information of the Applicant's alternative during
+                leaves:</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-form-field class="formPaddingFirst">
+                <input formControlName="appAltPhn" matInput placeholder="Phone" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('appAltPhn')?.touched && createcaseform.get('appAltPhn')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input type="email" formControlName="appAltEmail" matInput placeholder="Email" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('appAltEmail')?.touched && createcaseform.get('appAltEmail')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="appAltPosition" matInput placeholder="Position" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('appAltPosition')?.touched && createcaseform.get('appAltPosition')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="appAltName" matInput placeholder="Name" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('appAltName')?.touched && createcaseform.get('appAltName')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <div class="row">
+        <!--Defendent Info-->
+        <div class="col-lg-4">
+          <mat-card class="cardPadding">
+            <mat-card-header>
+              <mat-card-subtitle class="mat-card-subtitle">Information of the Second Party
+                (Defendent):</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-form-field class="formPaddingFirst">
+                <input formControlName="defName" matInput placeholder="Second Party's full name" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('defName')?.touched && createcaseform.get('defName')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="defId" matInput
+                  placeholder="ID no. (if natural person) / CR no. (if judicial person)" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('defId')?.touched && createcaseform.get('defId')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="defCrocReq" matInput placeholder="Is the Croquet available? (if Yes, attach)" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('defCrocReq')?.touched && createcaseform.get('defCrocReq')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="defPhn" matInput placeholder="Their phone Number" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('defPhn')?.touched && createcaseform.get('defPhn')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="defAdd" matInput placeholder="National Address" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('defAdd')?.touched && createcaseform.get('defAdd')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <!--Claim Info-->
+        <div class="col-lg-4">
+          <mat-card class="cardPadding">
+            <mat-card-header>
+              <mat-card-subtitle class="mat-card-subtitle">Information of the Claim:</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-form-field class="formPaddingFirst">
+                <input formControlName="claimAllegation" matInput placeholder="Allegation" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('claimAllegation')?.touched && createcaseform.get('claimAllegation')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <textarea formControlName="claimLawsuit" matInput
+                  placeholder="Is there any current/former lawsuit complaint related to the case"></textarea>
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('claimLawsuit')?.touched && createcaseform.get('claimLawsuit')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="claimDamages" matInput placeholder="Incurred Damage(s)" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('claimDamages')?.touched && createcaseform.get('claimDamages')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="formPaddingMain">
+                <input formControlName="claimAmt" matInput placeholder="Claimed Amount" />
+                <mat-hint class="mat-hint"
+                  *ngIf="createcaseform.get('claimAmt')?.touched && createcaseform.get('claimAmt')?.errors?.['required']">This
+                  field is
+                  required!</mat-hint>
+              </mat-form-field>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <div class="row">
+        <!--Supporting Documents-->
+        <div class="col-lg-8">
+          <mat-card class="cardPadding">
+            <mat-card-header>
+              <mat-card-subtitle class="mat-card-subtitle">Supporting Document (Evidence):</mat-card-subtitle>
+            </mat-card-header>
+
+          </mat-card>
+        </div>
+      </div>
+
+      <div class="row">
+        <!--Supporting Documents-->
+        <div class="col-lg-8">
+          <mat-card class="cardPadding">
+            <mat-card-header>
+              <mat-card-subtitle class="mat-card-subtitle">Associates fully knowledgeable of the
+                matter:</mat-card-subtitle>
+            </mat-card-header>
+
+          </mat-card>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8">
+          <mat-card class="cardPadding" style="background-color: #F2F3F4;">
+            <mat-card-actions>
+              <button color="accent" mat-raised-button style="margin-right:20px">Reset</button>
+              <button (click)="postCaseDetails()" color="primary" mat-raised-button>Submit!</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
   <h1>Create Case</h1>
   <form>
     <mat-card>
@@ -150,4 +479,4 @@
       </mat-card-content>
     </mat-card>
   </form>
-</div>
+</div> -->

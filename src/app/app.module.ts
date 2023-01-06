@@ -24,16 +24,16 @@ import { MaterialModule } from '../shared/shared/material.module';
   imports: [
     BrowserModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule, 
+    CaseModule,
     RouterModule.forRoot([
       { path: 'homepage', component: HomepageComponent },
       { path: '', redirectTo: 'homepage', pathMatch: 'full' },
       { path: '**', redirectTo: 'homepage', pathMatch: 'full' }
     ]),
-    BrowserAnimationsModule,
-    CaseModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MaterialModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

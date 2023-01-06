@@ -1,3 +1,64 @@
-<p>
-  caseinfo works!
-</p>
+<div class="flex-container">
+  <div class="col-lg-8">
+    <mat-card class="cardPadding" style="background-color: #F2F3F4;">
+      <mat-card-header>
+        <h1 style="font-weight:500;">Cases List</h1>
+      </mat-card-header>
+      <mat-card-content>
+        <!-- <mat-list-item *ngFor="let item of casesData">
+          <a class="spanSpace" matListItemTitle routerLink="/caseinfo/:id">{{item.companyName}}</a>
+          <span class="spanSpace" matListItemLine>{{item.id}}</span>
+          <span class="spanSpace" matListItemLine>{{item.crNum}}</span>
+          <span class="spanSpace" matListItemLine>{{item.natAdd}}</span>
+          <span class="spanSpace" matListItemLine>{{item.dirID}}</span>
+        </mat-list-item> -->
+
+        <table mat-table [dataSource]="casesData" class="mat-elevation-z8">
+
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+
+          <!-- Position Column -->
+          <ng-container matColumnDef="Id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="Name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.companyName}}</td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="CR No.">
+            <th mat-header-cell *matHeaderCellDef> CR No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.crNum}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="National Address">
+            <th mat-header-cell *matHeaderCellDef>National Address</th>
+            <td mat-cell *matCellDef="let element"> {{element.natAdd}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Directors ID">
+            <th mat-header-cell *matHeaderCellDef> Director's ID</th>
+            <td mat-cell *matCellDef="let element"> {{element.dirID}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Action">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <button *matCellDef="let element" [routerLink]="['/caseinfo/', element.id]" mat-raised-button color="accent">View</button>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!--<button *matCellDef="let element" [routerLink]="['/caseinfo/', element.id]" mat-raised-button color="accent">Submit!</button>-->

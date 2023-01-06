@@ -1,3 +1,71 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar>
 <router-outlet></router-outlet>
+<app-footer></app-footer> -->
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-label routerLink="/homepage">{{title}}</mat-label>
+        <div id="google_translate_element" style="position: absolute; z-index: 10000; right: 0"></div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="sidenavBtn">
+    <mat-sidenav #sidenav opened="true" mode="side">
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>Legal</mat-panel-title>
+                <mat-icon>keyboard_arrow_down</mat-icon>
+            </mat-expansion-panel-header>
+            <div class="row">
+                <div>
+                    <button mat-button routerLink="/litigationhome">Litigation Home</button>
+                </div>
+                <div>
+                    <button mat-button routerLink="/createcase">Create Case</button>
+                </div>
+                <div>
+                    <button mat-button routerLink="/caseinfo">Case Info</button>
+                </div>
+                <div>
+                    <button mat-button routerLink="/casearchive">Case Archive</button>
+                </div>
+            </div>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel hideToggle style="margin-top: 20px;">
+            <mat-expansion-panel-header>
+                <mat-panel-title>Business Development</mat-panel-title>
+                <mat-icon>keyboard_arrow_down</mat-icon>
+            </mat-expansion-panel-header>
+            <div class="row" >
+                <div>
+                    <button mat-button>M & A</button>
+                </div>
+                <div>
+                    <button mat-button>Joint Venture</button>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="navContent">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
 <app-footer></app-footer>
+
+
+<!-- <div class="row">
+    <div>
+        <button mat-button routerLink="/createcase">Litigation</button>
+    </div>
+    <div>
+        <button mat-button>M & A</button>
+    </div>
+    <div>
+        <button mat-button>Joint Venture</button>
+    </div>
+</div> -->

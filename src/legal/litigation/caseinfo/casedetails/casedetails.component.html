@@ -1,3 +1,106 @@
-<p>
-  casedetails works!
-</p>
+<div class="flex-container">
+  <div class="col-lg-8">
+    <mat-card class="cardPadding" style="background-color: #F2F3F4;">
+      <mat-card-header>
+        <h1 style="font-weight:500;">Cases Details</h1>
+        <h3 style="margin-left:10px; margin-top:3px;">Case Id: {{casesData.id}}</h3>
+        <button mat-raised-button color="primary" style="margin-left:500px;" (click)="onBack()">Go Back</button>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-lg-6">
+            <mat-card class="mat-elevation-z8; cardPadding">
+              <h2 class="mat-label-det">Information of Company seeking the lawsuit:</h2>
+              <h3 style="font-weight: 500;" class="mat-label-det">Company Name</h3>
+              <mat-label class="mat-label-det">{{casesData.companyName}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">National Address</h3>
+              <mat-label class="mat-label-det">{{casesData.natAdd}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">CR No.</h3>
+              <mat-label class="mat-label-det">{{casesData.crNum}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Directors ID</h3>
+              <mat-label class="mat-label-det">{{casesData.dirID}}</mat-label>
+            </mat-card>
+          </div>
+          <div class="col-lg-6">
+            <mat-card class="mat-elevation-z8; cardPadding">
+              <h2 class="mat-label-det">Information of the applicant:</h2>
+              <h3 style="font-weight: 500;" class="mat-label-det">Phone</h3>
+              <mat-label class="mat-label-det">{{casesData.appPhn}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Email</h3>
+              <mat-label class="mat-label-det">{{casesData.appEmail}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Position</h3>
+              <mat-label class="mat-label-det">{{casesData.appPosition}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Name</h3>
+              <mat-label class="mat-label-det">{{casesData.appName}}</mat-label>
+            </mat-card>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <mat-card class="mat-elevation-z8; cardPadding">
+              <h2 class="mat-label-det">Information of Applicant's Direct Manager:</h2>
+              <h3 style="font-weight: 500;" class="mat-label-det">Phone</h3>
+              <mat-label class="mat-label-det">{{casesData.appManPhn}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Email</h3>
+              <mat-label class="mat-label-det">{{casesData.appManEmail}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Position</h3>
+              <mat-label class="mat-label-det">{{casesData.appManPosition}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Name</h3>
+              <mat-label class="mat-label-det">{{casesData.appManName}}</mat-label>
+            </mat-card>
+          </div>
+          <div class="col-lg-6">
+            <mat-card class="mat-elevation-z8; cardPadding">
+              <h2 class="mat-label-det">Information of Applicant's alternative during leaves:</h2>
+              <h3 style="font-weight: 500;" class="mat-label-det">Phone</h3>
+              <mat-label class="mat-label-det">{{casesData.appAltPhn}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Email</h3>
+              <mat-label class="mat-label-det">{{casesData.appAltEmail}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Position</h3>
+              <mat-label class="mat-label-det">{{casesData.appAltPosition}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Name</h3>
+              <mat-label class="mat-label-det">{{casesData.appAltName}}</mat-label>
+            </mat-card>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <mat-card class="mat-elevation-z8; cardPadding">
+              <h2 class="mat-label-det">Information of Second Party(Defendent):</h2>
+              <h3 style="font-weight: 500;" class="mat-label-det">Second Party's full name:</h3>
+              <mat-label class="mat-label-det">{{casesData.defName}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">ID no. (if natural person) / CR no. (if judicial
+                person):</h3>
+              <mat-label class="mat-label-det">{{casesData.defId}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Is the Croquet available? (if Yes, attach):</h3>
+              <mat-label class="mat-label-det">{{casesData.defCrocReq}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Their phone Number:</h3>
+              <mat-label class="mat-label-det">{{casesData.defPhn}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">National Address:</h3>
+              <mat-label class="mat-label-det">{{casesData.defAdd}}</mat-label>
+            </mat-card>
+          </div>
+          <div class="col-lg-6">
+            <mat-card class="mat-elevation-z8; cardPadding">
+              <h2 class="mat-label-det">Information of the Claim:</h2>
+              <h3 style="font-weight: 500;" class="mat-label-det">Allegation:</h3>
+              <mat-label class="mat-label-det">{{casesData.claimAllegation}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Is there any current/former lawsuit complaint related
+                to the case:</h3>
+              <mat-label class="mat-label-det">{{casesData.claimLawsuit}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Incurred Damage(s):</h3>
+              <mat-label class="mat-label-det">{{casesData.claimDamages}}</mat-label>
+              <h3 style="font-weight: 500;" class="mat-label-det">Claimed Amount:</h3>
+              <mat-label class="mat-label-det">{{casesData.claimAmt}}</mat-label>
+            </mat-card>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="onBack()">Go Back</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

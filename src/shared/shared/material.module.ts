@@ -37,6 +37,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import {CdkTreeModule} from '@angular/cdk/tree';
+
 
 @NgModule({
   declarations: [],
@@ -78,6 +80,7 @@ import { MatTableModule } from '@angular/material/table';
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
+    CdkTreeModule
   ],
   exports: [
     CommonModule,
@@ -116,7 +119,8 @@ import { MatTableModule } from '@angular/material/table';
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    CdkTreeModule
   ]
 
 })

@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/c5f3bb23-f675-4d28-945e-4044941a9b43/AppServices/subscriptions/c5f3bb23-f675-4d28-945e-4044941a9b43/resourceGroups/SIRC-LegalApp/providers/Microsoft.Web/sites/SIRC-LegalApp",
+    "appService.deploySubpath": "."
+}

@@ -1,0 +1,17 @@
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.cardPadding {
+    padding: 5px;
+    margin: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.spanSpace {
+    margin-left: 10px;
+    margin-right: 10px ;
+}

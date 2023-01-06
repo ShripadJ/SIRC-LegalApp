@@ -1,0 +1,102 @@
+{
+  "cases": [
+    {
+      "id": 1,
+      "companyName": "ThingsReach",
+      "crNum": "12345",
+      "natAdd": "Pune",
+      "dirID": "TR-123"
+    },
+    {
+      "id": 2,
+      "companyName": "Terracez",
+      "crNum": "54321",
+      "natAdd": "Dubai",
+      "dirID": "TZ-543"
+    },
+    {
+      "id": 3,
+      "companyName": "Phressia",
+      "crNum": "99999",
+      "natAdd": "California",
+      "dirID": "PR-999"
+    },
+    {
+      "id": 4,
+      "companyName": "ABB",
+      "crNum": "1111",
+      "natAdd": "Bangalore",
+      "dirID": "ABB-000"
+    },
+    {
+      "id": 5,
+      "companyName": "",
+      "crNum": "",
+      "natAdd": "",
+      "dirID": ""
+    },
+    {
+      "id": 6,
+      "companyName": "1",
+      "crNum": "2",
+      "natAdd": "3",
+      "dirID": "4"
+    },
+    {
+      "id": 7,
+      "companyName": "test",
+      "crNum": "test",
+      "natAdd": "test",
+      "dirID": "test",
+      "appPhn": "test",
+      "appEmail": "test",
+      "appPosition": "test",
+      "appName": "test",
+      "appManPhn": "test",
+      "appManEmail": "test",
+      "appManPosition": "test",
+      "appManName": "test",
+      "appAltPhn": "test",
+      "appAltEmail": "test",
+      "appAltPosition": "test",
+      "appAltName": "test",
+      "defName": "test",
+      "defId": "test",
+      "defCrocReq": "test",
+      "defPhn": "test",
+      "defAdd": "test",
+      "claimAllegation": "test",
+      "claimLawsuit": "test",
+      "claimDamages": "test",
+      "claimAmt": "test"
+    },
+    {
+      "id": 8,
+      "companyName": "SIRC-HR",
+      "crNum": "10101",
+      "natAdd": "Dubai",
+      "dirID": "912837",
+      "appPhn": "123456789",
+      "appEmail": "hello@demo.com",
+      "appPosition": "Associate",
+      "appName": "John Doe",
+      "appManPhn": "123456789",
+      "appManEmail": "hello@demo.com",
+      "appManPosition": "Manager",
+      "appManName": "Jane Doe",
+      "appAltPhn": "123456789",
+      "appAltEmail": "hello@demo.com",
+      "appAltPosition": "Jr. Associate",
+      "appAltName": "Josh Doe",
+      "defName": "Terracez",
+      "defId": "2569",
+      "defCrocReq": "yes",
+      "defPhn": "123456789",
+      "defAdd": "Abu Dhabi",
+      "claimAllegation": "Patent Violation",
+      "claimLawsuit": "Description",
+      "claimDamages": "25000",
+      "claimAmt": "22000"
+    }
+  ]
+}

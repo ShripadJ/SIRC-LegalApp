@@ -10,6 +10,7 @@ import { CreatecaseComponent } from 'src/legal/litigation/createcase/createcase.
 import { CaseinfoComponent } from 'src/legal/litigation/caseinfo/caseinfo.component';
 import { CasearchiveComponent } from 'src/legal/litigation/casearchive/casearchive.component';
 import { CasedetailsComponent } from 'src/legal/litigation/caseinfo/casedetails/casedetails.component';
+import { CaseinfoGuard } from './caseinfo/caseinfo.guard';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { CasedetailsComponent } from 'src/legal/litigation/caseinfo/casedetails/
       { path:'createcase', component:CreatecaseComponent },
       { path:'caseinfo', component:CaseinfoComponent },
       { path:'casearchive', component:CasearchiveComponent},
-      { path:'createcase/:id', component:CasedetailsComponent },
+      { path:'caseinfo/:id', canActivate: [CaseinfoGuard] , component:CasedetailsComponent },
     ]),
   ],
   exports: []
