@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sirc-test-4fc65": {
+      "hosting": {
+        "SIRC-LegalApp": [
+          "sirc-test-4fc65"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sirc-test-4fc65"
+  }
+}

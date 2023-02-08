@@ -2,7 +2,7 @@
   <div class="col-lg-8">
     <mat-card class="cardPadding" style="background-color: #F2F3F4;">
       <mat-card-header>
-        <h1 style="font-weight:500;">Cases List</h1>
+        <h1 style="font-weight:500;">Legal Request List</h1>
       </mat-card-header>
       <mat-card-content>
         <!-- <mat-list-item *ngFor="let item of casesData">
@@ -13,7 +13,7 @@
           <span class="spanSpace" matListItemLine>{{item.dirID}}</span>
         </mat-list-item> -->
 
-        <table mat-table [dataSource]="casesData" class="mat-elevation-z8">
+        <table mat-table [dataSource]="requestData" class="mat-elevation-z8">
 
           <!--- Note that these columns can be defined in any order.
                 The actual rendered columns are set as a property on the row definition" -->
@@ -25,31 +25,31 @@
           </ng-container>
 
           <!-- Name Column -->
-          <ng-container matColumnDef="Name">
-            <th mat-header-cell *matHeaderCellDef> Name </th>
-            <td mat-cell *matCellDef="let element"> {{element.CompanyName}}</td>
+          <ng-container matColumnDef="Division">
+            <th mat-header-cell *matHeaderCellDef> Division </th>
+            <td mat-cell *matCellDef="let element"> {{element.Division}}</td>
           </ng-container>
 
           <!-- Weight Column -->
-          <ng-container matColumnDef="CR No.">
-            <th mat-header-cell *matHeaderCellDef> CR No. </th>
-            <td mat-cell *matCellDef="let element"> {{element.CRNo}} </td>
+          <ng-container matColumnDef="ApplicantName">
+            <th mat-header-cell *matHeaderCellDef> ApplicantName </th>
+            <td mat-cell *matCellDef="let element"> {{element.ApplicantName}} </td>
           </ng-container>
 
           <!-- Symbol Column -->
-          <ng-container matColumnDef="National Address">
-            <th mat-header-cell *matHeaderCellDef>National Address</th>
-            <td mat-cell *matCellDef="let element"> {{element.NationalAddress}} </td>
+          <ng-container matColumnDef="Department">
+            <th mat-header-cell *matHeaderCellDef>Department</th>
+            <td mat-cell *matCellDef="let element"> {{element.Department}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="Directors ID">
-            <th mat-header-cell *matHeaderCellDef> Director's ID</th>
-            <td mat-cell *matCellDef="let element"> {{element.DirectorsID}} </td>
+          <ng-container matColumnDef="ReqDateTime">
+            <th mat-header-cell *matHeaderCellDef> ReqDateTime </th>
+            <td mat-cell *matCellDef="let element"> {{element.ReqDateTime}} </td>
           </ng-container>
 
           <ng-container matColumnDef="Action">
             <th mat-header-cell *matHeaderCellDef>Action</th>
-            <button *matCellDef="let element" [routerLink]="['/caseinfo/', element.ID]" mat-raised-button color="accent">View</button>
+            <button style="margin-top: 10px;" *matCellDef="let element" [routerLink]="['/viewRequest/', element.ID]" mat-raised-button color="accent">View</button>
           </ng-container>
 
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -61,4 +61,3 @@
   </div>
 </div>
 
-<!--<button *matCellDef="let element" [routerLink]="['/caseinfo/', element.id]" mat-raised-button color="accent">Submit!</button>-->
