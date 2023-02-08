@@ -1,0 +1,383 @@
+<div class="flex-container">
+  <div>
+    <form [formGroup]="legalrequestform">
+
+      <!--Header-->
+      <div class="col-lg-10">
+        <mat-card class="cardPadding" style="background-color: #F2F3F4;">
+          <mat-card-header>
+            <h1 style="font-weight:500; color: #009a74;">Create Legal Request</h1>
+          </mat-card-header>
+          <!-- <mat-card-content>
+            <button (click)="resetRequestForm()" color="accent" mat-raised-button
+              style="margin-right:10px">Reset</button>
+            <button color="primary" mat-raised-button>Submit!</button>
+          </mat-card-content> -->
+        </mat-card>
+      </div>
+
+      <div class="row">
+
+        <!--Form Body-->
+        <div class="col-lg-10">
+
+          <mat-card class="cardPadding">
+            <mat-card-content>
+
+              <div class="row" style="margin-bottom: 10px;">
+                <div class="col-lg-3" style="align-content: center;">
+                  <mat-label>Division:</mat-label>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-label>Service:</mat-label>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-label>Subject:</mat-label>
+                </div>
+              </div>
+
+              <mat-divider></mat-divider>
+
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-3">
+                  <section class="example-section">
+                    <mat-checkbox formControlName="division"
+                      (change)="divisionName('Business Development & Investment')"
+                      checked="BusinessDevelopment&Investment" class="example-margin">Business Development &
+                      Investment</mat-checkbox>
+                  </section>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-form-field>
+                    <mat-label>Choose an item</mat-label>
+                    <mat-select formControlName="service">
+                      <mat-option *ngFor="let service of services1" [value]="service.value">
+                        {{service.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-form-field>
+                    <mat-label>Choose an item</mat-label>
+                    <mat-select formControlName="subject">
+                      <mat-option *ngFor="let service of services2" [value]="service.value">
+                        {{service.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <mat-divider></mat-divider>
+
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-3">
+                  <section class="example-section">
+                    <mat-checkbox formControlName="division" class="example-margin"
+                      (change)="divisionName('Litigation')">Litigation</mat-checkbox>
+                  </section>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-form-field>
+                    <mat-label>Choose an item</mat-label>
+                    <mat-select formControlName="service">
+                      <mat-option *ngFor="let service of services3" [value]="service.value">
+                        {{service.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-form-field>
+                    <mat-label>Choose an item</mat-label>
+                    <mat-select formControlName="subject">
+                      <mat-option *ngFor="let service of services4" [value]="service.value">
+                        {{service.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <mat-divider></mat-divider>
+
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-3">
+                  <section class="example-section">
+                    <mat-checkbox formControlName="division" class="example-margin"
+                      (change)="divisionName('Advisory')">Advisory</mat-checkbox>
+                  </section>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-form-field>
+                    <mat-label>Choose an item</mat-label>
+                    <mat-select formControlName="service">
+                      <mat-option *ngFor="let service of services5" [value]="service.value">
+                        {{service.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-form-field>
+                    <mat-label>Choose an item</mat-label>
+                    <mat-select formControlName="subject">
+                      <mat-option *ngFor="let service of services6" [value]="service.value">
+                        {{service.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <mat-divider></mat-divider>
+
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-3">
+                  <section class="example-section">
+                    <mat-checkbox formControlName="division" class="example-margin"
+                      (change)="divisionName('Contracts & Agreements')">Contracts &
+                      Agreements</mat-checkbox>
+                  </section>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-form-field>
+                    <mat-label>Choose an item</mat-label>
+                    <mat-select formControlName="service">
+                      <mat-option *ngFor="let service of services7" [value]="service.value">
+                        {{service.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-form-field>
+                    <mat-label>Choose an item</mat-label>
+                    <mat-select formControlName="subject">
+                      <mat-option *ngFor="let service of services8" [value]="service.value">
+                        {{service.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <mat-divider></mat-divider>
+
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-3">
+                  <section class="example-section">
+                    <mat-checkbox formControlName="division" class="example-margin"
+                      (change)="divisionName('Corporate Registry Services')">Corporate Registry
+                      Services</mat-checkbox>
+                  </section>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-form-field>
+                    <mat-label>Choose an item</mat-label>
+                    <mat-select formControlName="service">
+                      <mat-option *ngFor="let service of services9" [value]="service.value">
+                        {{service.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-form-field>
+                    <mat-label>Choose an item</mat-label>
+                    <mat-select formControlName="subject">
+                      <mat-option *ngFor="let service of services10" [value]="service.value">
+                        {{service.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <mat-divider></mat-divider>
+
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-3">
+                  <section class="example-section">
+                    <mat-checkbox formControlName="division" class="example-margin"
+                      (change)="divisionName('Other')">Other</mat-checkbox>
+                  </section>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-form-field>
+                    <textarea formControlName="service" matInput placeholder="Enter information here..."></textarea>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-lg-3">
+                  <mat-form-field>
+                    <textarea formControlName="subject" matInput placeholder="Enter information here..."></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <!-- <mat-divider></mat-divider> -->
+
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card class="cardPadding">
+            <mat-card-content>
+              <div class="row">
+                <div class="col-lg-3">
+                  <mat-label>Brief and specifications of the scope of work and what legal support is
+                    required:</mat-label>
+                </div>
+                <div class="col-lg-9">
+                  <mat-form-field>
+                    <textarea formControlName="briefDescp" matInput placeholder="Enter information here..."></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card class="cardPadding">
+            <mat-card-header style="font-weight:500;">Questionnaire:</mat-card-header>
+            <mat-card-content>
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-8">
+                  <mat-label>Is there any attachment/support doc to the request?</mat-label>
+                </div>
+                <div class="col-lg-2">
+                  <mat-checkbox formControlName="questionnaire_1" class="example-margin"></mat-checkbox>
+                </div>
+              </div>
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-6">
+                  <mat-label style="font-weight: 500;">If the answer is yes please provide us with
+                    documents:</mat-label>
+                  <input type="file" multiple (change)="selectFiles($event)">
+                  <ul>
+                    <li *ngFor="let file of files">
+                      {{ file.name }} ({{ file.size }} bytes)
+                    </li>
+                    <!-- <button style="margin-top: 10px;" (click)="postAttachments()" mat-raised-button color="primary">Submit!</button> -->
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <mat-form-field>
+                  <input formControlName="question_1_comment" matInput placeholder="Comments">
+                </mat-form-field>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card class="cardPadding">
+            <mat-card-header style="font-weight:500;">Questionnaire:</mat-card-header>
+            <mat-card-content>
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-8">
+                  <mat-label>Did the applicant receive any previous work from legal subject to the requested
+                    service?</mat-label>
+                </div>
+                <div class="col-lg-2">
+                  <mat-checkbox formControlName="questionnaire_2" class="example-margin"></mat-checkbox>
+                </div>
+              </div>
+              <div class="row" style="margin-top: 20px;">
+                <div class="col-lg-6">
+                  <mat-label style="font-weight: 500;">If the answer is yes, please Provide us with the deliverables
+                    from legal:</mat-label>
+                  <div class="col-lg-3">
+                    <mat-form-field>
+                      <textarea formControlName="question_2_comment" matInput
+                        placeholder="Enter information here..."></textarea>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card class="cardPadding" style="background-color: #F2F3F4;">
+            <mat-card-content>
+              <mat-label>Legal Team understands by submitting this request, that you already have all the required
+                approvals subject to the required
+                service such as Finance, GRC, Technical, BD, etc. as Legal Team's responsibility is limited to having
+                the best legal stand for
+                SIRC and its subsidiaries and ensuring the legality considering the applicable laws regulations in Saudi
+                Arabia. Your
+                signature below further represents, warrants, and certifies that the information in the application is
+                correct and complete.</mat-label>
+            </mat-card-content>
+          </mat-card>
+
+        </div>
+      </div>
+
+      <mat-card class="cardPadding">
+        <mat-card-header style="font-weight:500;">Self Declaration:</mat-card-header>
+        <mat-card-content>
+          <div class="row" style="margin-top: 20px;">
+            <div class="col-lg-3">
+              <mat-label>Name:</mat-label>
+              <mat-form-field>
+                <input formControlName="applicantName" matInput matInput placeholder="Enter Applicants Name" />
+              </mat-form-field>
+            </div>
+            <div class="col-lg-3">
+              <mat-label>Department:</mat-label>
+              <mat-form-field>
+                <input formControlName="department" matInput matInput placeholder="Enter Department" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <mat-label>Signature:</mat-label>
+            <mat-form-field>
+              <input formControlName="signature" matInput matInput placeholder="Intial here..." />
+            </mat-form-field>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+
+      <div class="col-lg-10">
+        <mat-card class="cardPadding" style="background-color: #F2F3F4;">
+          <mat-card-content>
+            <button (click)="resetRequestForm()" color="accent" mat-raised-button
+              style="margin-right:10px">Reset</button>
+            <button (click)="postLegalRequest()" color="primary" mat-raised-button>Submit!</button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+<!-- <p>Demo works!</p>
+
+<input type="file" (change)="selectFile($event)">
+<img *ngIf="fileBase64" [src]="fileBase64">
+
+<input type="file" multiple (change)="selectFiles($event)">
+<ul>
+  <li *ngFor="let file of files">
+    {{ file.name }} ({{ file.size }} bytes)
+    <p *ngIf="file.base64">{{file.base64}}</p>
+  </li>
+  <button (click)="postAttachments()">Submit!</button>
+</ul> -->

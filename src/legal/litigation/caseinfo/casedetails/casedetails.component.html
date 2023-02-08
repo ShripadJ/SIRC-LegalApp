@@ -3,7 +3,7 @@
     <mat-card class="cardPadding" style="background-color: #F2F3F4;">
       <mat-card-header>
         <h1 style="font-weight:500;">Cases Details</h1>
-        <h3 style="margin-left:10px; margin-top:3px;">Case Id: {{casesData.id}}</h3>
+        <h3 style="margin-left:10px; margin-top:3px;">Case Id: {{casesData.ID}}</h3>
         <button mat-raised-button color="primary" style="margin-left:500px;" (click)="onBack()">Go Back</button>
       </mat-card-header>
       <mat-divider></mat-divider>
@@ -13,13 +13,13 @@
             <mat-card class="mat-elevation-z8; cardPadding">
               <h2 class="mat-label-det">Information of Company seeking the lawsuit:</h2>
               <h3 style="font-weight: 500;" class="mat-label-det">Company Name</h3>
-              <mat-label class="mat-label-det">{{casesData.companyName}}</mat-label>
+              <mat-label class="mat-label-det">{{casesData.CompanyName}}</mat-label>
               <h3 style="font-weight: 500;" class="mat-label-det">National Address</h3>
-              <mat-label class="mat-label-det">{{casesData.natAdd}}</mat-label>
+              <mat-label class="mat-label-det">{{casesData.NationalAddress}}</mat-label>
               <h3 style="font-weight: 500;" class="mat-label-det">CR No.</h3>
-              <mat-label class="mat-label-det">{{casesData.crNum}}</mat-label>
+              <mat-label class="mat-label-det">{{casesData.CRNo}}</mat-label>
               <h3 style="font-weight: 500;" class="mat-label-det">Directors ID</h3>
-              <mat-label class="mat-label-det">{{casesData.dirID}}</mat-label>
+              <mat-label class="mat-label-det">{{casesData.DirectorsID}}</mat-label>
             </mat-card>
           </div>
           <div class="col-lg-6">

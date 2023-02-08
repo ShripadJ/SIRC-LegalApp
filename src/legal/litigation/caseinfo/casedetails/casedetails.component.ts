@@ -12,7 +12,9 @@ export class CasedetailsComponent implements OnInit {
 
   pageTitle: string = "Case No.:";
 
-  casesData !: Case;
+  //casesData !: Case;
+
+  casesData !: any;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -22,12 +24,12 @@ export class CasedetailsComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.pageTitle += ` ${id}`;
     if (id) {
-      this.getCases(id);
+      this.getCasesByID(id);
     }
   }
 
-  getCases(id: number) {
-    this._apiService.getById(id).subscribe(response => {
+  getCasesByID(id: number) {
+    this._apiService.getCasesByID(id).subscribe(response => {
       this.casesData = response;
     })
   }

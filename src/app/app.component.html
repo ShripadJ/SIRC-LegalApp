@@ -11,15 +11,15 @@
         <div id="google_translate_element" style="position: absolute; z-index: 10000; right: 0"></div>
     </mat-toolbar-row>
 </mat-toolbar>
-<mat-sidenav-container class="sidenavBtn">
-    <mat-sidenav #sidenav opened="true" mode="side">
+<mat-sidenav-container class="sidenavBtn" [hasBackdrop]="false">
+    <mat-sidenav #sidenav opened="true" mode="push" >
         <mat-expansion-panel hideToggle>
             <mat-expansion-panel-header>
-                <mat-panel-title>Legal</mat-panel-title>
+                <mat-panel-title>Legal Service Request</mat-panel-title>
                 <mat-icon>keyboard_arrow_down</mat-icon>
             </mat-expansion-panel-header>
             <div class="row">
-                <div>
+                <!-- <div>
                     <button mat-button routerLink="/litigationhome">Litigation Home</button>
                 </div>
                 <div>
@@ -30,6 +30,12 @@
                 </div>
                 <div>
                     <button mat-button routerLink="/casearchive">Case Archive</button>
+                </div> -->
+                <div>
+                    <button mat-button routerLink="/createRequest">Create Request(s)</button>
+                </div>
+                <div>
+                    <button mat-button routerLink="/viewRequest">View Request(s)</button>
                 </div>
             </div>
         </mat-expansion-panel>

@@ -51,6 +51,8 @@ export class CreatecaseComponent implements OnInit {
     this.createCaseObj.claimDamages = this.createcaseform.value.claimDamages;
     this.createCaseObj.claimAmt = this.createcaseform.value.claimAmt;
 
+    console.log(this.createCaseObj);
+
     this._apiService.createCase(this.createCaseObj).subscribe(response => {
       console.log(response);
       alert("Case Added Successfully");

@@ -10,7 +10,10 @@ import { CreatecaseComponent } from 'src/legal/litigation/createcase/createcase.
 import { CaseinfoComponent } from 'src/legal/litigation/caseinfo/caseinfo.component';
 import { CasearchiveComponent } from 'src/legal/litigation/casearchive/casearchive.component';
 import { CasedetailsComponent } from 'src/legal/litigation/caseinfo/casedetails/casedetails.component';
-import { CaseinfoGuard } from './caseinfo/caseinfo.guard';
+import { SharedComponent } from 'src/legal/litigation/shared/shared.component';
+import { ViewrequestComponent } from 'src/legal/litigation/viewrequest/viewrequest.component';
+import { RequestdetailsComponent } from 'src/legal/litigation/viewrequest/requestdetails/requestdetails.component';
+//import { CaseinfoGuard } from './caseinfo/caseinfo.guard';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { CaseinfoGuard } from './caseinfo/caseinfo.guard';
     CreatecaseComponent,
     CaseinfoComponent,
     CasearchiveComponent,
-    CasedetailsComponent
+    CasedetailsComponent,
+    SharedComponent,
+    ViewrequestComponent,
+    RequestdetailsComponent
   ],
   imports: [
     CommonModule,
@@ -26,11 +32,14 @@ import { CaseinfoGuard } from './caseinfo/caseinfo.guard';
     ReactiveFormsModule,
     MaterialModule,
     RouterModule.forChild([
-      { path:'litigationhome', component:LitigationhomeComponent },
-      { path:'createcase', component:CreatecaseComponent },
-      { path:'caseinfo', component:CaseinfoComponent },
-      { path:'casearchive', component:CasearchiveComponent},
-      { path:'caseinfo/:id', canActivate: [CaseinfoGuard] , component:CasedetailsComponent },
+      //{ path:'litigationhome', component:LitigationhomeComponent },
+      //{ path:'createcase', component:CreatecaseComponent },
+      //{ path:'caseinfo', component:CaseinfoComponent },
+      //{ path:'casearchive', component:CasearchiveComponent},
+      //{ path:'caseinfo/:id', canActivate: [CaseinfoGuard] , component:CasedetailsComponent },
+      { path:'createRequest', component:SharedComponent},
+      { path:'viewRequest', component:ViewrequestComponent },
+      { path:'viewRequest/:id' , component:RequestdetailsComponent },
     ]),
   ],
   exports: []

@@ -1,0 +1,55 @@
+<div class="flex-container">
+  <div class="col-lg-10">
+    <mat-card class="cardPadding" style="background-color: #F2F3F4;">
+      <mat-card-header>
+        <button mat-raised-button color="primary" style="margin-right:10px;" (click)="onBack()">Go Back</button>
+        <h1 style="font-weight:500;">Legal Request Details</h1>
+        <h3 style="margin-left:10px; margin-top:3px;">Id: {{requestData.ID}}</h3>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-lg-10">
+            <mat-card style="margin-top: 10px;" class="mat-elevation-z8; cardPadding">
+              <mat-label style="font-weight: 500;margin-left: 10px; margin-top: 10px;" class="mat-label-det">Division</mat-label>
+              <mat-label style="margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" class="mat-label-det">{{requestData.Division}}</mat-label>
+            </mat-card>
+            <mat-card style="margin-top: 10px;" class="mat-elevation-z8; cardPadding">
+              <mat-label style="font-weight: 500;margin-left: 10px; margin-top: 10px;" class="mat-label-det">Service</mat-label>
+              <mat-label style="margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" class="mat-label-det">{{requestData.Services}}</mat-label>
+            </mat-card>
+            <mat-card style="margin-top: 10px;" class="mat-elevation-z8; cardPadding">
+              <mat-label style="font-weight: 500;margin-left: 10px; margin-top: 10px;" class="mat-label-det">Subject</mat-label>
+              <mat-label style="margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" class="mat-label-det">{{requestData.Subject}}</mat-label>
+            </mat-card>
+            <mat-card style="margin-top: 10px;" class="mat-elevation-z8; cardPadding">
+              <mat-label style="font-weight: 500;margin-left: 10px; margin-top: 10px;" class="mat-label-det">Request Description</mat-label>
+              <mat-label style="margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" class="mat-label-det">{{requestData.RequestDescription}}</mat-label>
+            </mat-card>
+            <mat-card style="margin-top: 10px;" class="mat-elevation-z8; cardPadding">
+              <mat-label style="font-weight: 500;margin-left: 10px; margin-top: 10px;" class="mat-label-det">Questionnaire</mat-label>
+              <mat-label style="margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" class="mat-label-det">{{requestData.Questionnaire}}</mat-label>
+            </mat-card>
+            <mat-card style="margin-top: 10px;" class="mat-elevation-z8; cardPadding">
+              <mat-label style="font-weight: 500;margin-left: 10px; margin-top: 10px;" class="mat-label-det">Attachments</mat-label>
+              <mat-label style="margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" class="mat-label-det">{{requestData.Attachments}}"</mat-label>
+            </mat-card>
+            <mat-card style="margin-top: 10px;" class="mat-elevation-z8; cardPadding">
+              <mat-label style="font-weight: 500;margin-left: 10px; margin-top: 10px;" class="mat-label-det">Applicant Name</mat-label>
+              <mat-label style="margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" class="mat-label-det">{{requestData.ApplicantName
+              }}</mat-label>
+            </mat-card>
+            <mat-card style="margin-top: 10px;" class="mat-elevation-z8; cardPadding">
+              <mat-label style="font-weight: 500;margin-left: 10px; margin-top: 10px;" class="mat-label-det">Department</mat-label>
+              <mat-label style="margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" class="mat-label-det">{{requestData.Department}}</mat-label>
+            </mat-card>
+            <mat-card style="margin-top: 10px;" class="mat-elevation-z8; cardPadding">
+              <mat-label style="font-weight: 500;margin-left: 10px; margin-top: 10px;" class="mat-label-det">Request Date</mat-label>
+              <mat-label style="margin-left: 10px; margin-top: 5px; margin-bottom: 5px;" class="mat-label-det">{{requestData.ReqDateTime}}</mat-label>
+            </mat-card>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
